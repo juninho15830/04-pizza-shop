@@ -5,14 +5,6 @@ import { BarChart } from "lucide-react";
 import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import colors from "tailwindcss/colors"
 
-const data = [
-  { product: 'Pepperoni', amount: 39 },
-  { product: 'Mussarela', amount: 32 },
-  { product: 'Presunto', amount: 47 },
-  { product: '4 Queijos', amount: 15 },
-  { product: 'Frango', amount: 26 },
-]
-
 const COLORS = [
   colors.sky['500'],
   colors.amber['500'],
@@ -39,7 +31,7 @@ export function PopularProductsChart() {
       <CardContent>
         {
           popularProducts && <ResponsiveContainer width="100%" height={240}>
-            <PieChart data={data} style={{ fontSize: 12}}>
+            <PieChart style={{ fontSize: 12}}>
               
               <Pie
                 data={popularProducts}
